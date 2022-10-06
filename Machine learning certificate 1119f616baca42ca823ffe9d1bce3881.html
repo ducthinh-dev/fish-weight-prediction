@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Machine learning certificate</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1119f616-baca-42ca-823f-fe9d1bce3881" class="page sans"><header><h1 class="page-title">Machine learning certificate</h1></header><div class="page-body"><h1 id="fa0e75ee-76c6-45b3-8395-3a2aeb35a4e1" class="">Table of content</h1><nav id="17f00e6d-df5a-47a6-9099-eb87808bce24" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fa0e75ee-76c6-45b3-8395-3a2aeb35a4e1">Table of content</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7a786736-f18b-4f09-bc22-c1300ce8cfef">Course #1: Exploratory data analysis for machine learning</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5bc57350-0447-460d-8516-430184ad9182">Week 1</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9734ec89-5b10-4acb-8da0-a929cfa6dd49">Course prerequisites</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a6678be1-76f1-4cfc-9f30-84ddf3e36c6a">Introduction to Machine Learning and Artificial Intelligence</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9bb903b3-a7b5-4d6f-8aa2-a69685890cfa">History of AI</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#5a09481a-bad8-4b99-b987-47aed1f9140e">Modern AI: Applications &amp; Machine learning workflow</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9890c43c-41f0-4c02-89dd-e31506dfe7fb">Week 2</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#533f501a-0205-4cad-b986-4222773fb10b">Retrieving data</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2b5bbffc-469b-43b4-ac8a-2c115d88a8ee">Data cleaning</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6f6368ab-cbf3-4453-a21f-7c687aa617a3">Week 3</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e154f233-a9f2-43da-af7a-aa358cb27d3f">Exploratory data analysis (EDA)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#80379232-31cf-4f95-840c-e12b40e6d0be">Feature engineering and Variable transformation</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d318a0eb-d5cb-4fa4-9198-3e0894cd6907">Week 4</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#39b60192-f6b6-4558-ae53-9c1853fbccf8">Estimation and inference</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#03d428ea-1bbc-4573-baf8-6be333a14f73">Hypothesis testing</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#8fdd06e9-6bc6-4fe1-b562-6741c20b58b5"><strong>Type 1 vs. Type 2 error</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9b2ce038-bdbe-4573-999e-47dca7d291a1">Significance level and P-values</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1b18f01a-8bfa-430c-90c7-f63a3681dcea">Correlation vs Causation</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4c39a031-f647-4b31-9558-1e648b96a48d">Honour Project</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2af09e95-baef-4396-a883-928c29fc3683">Course #2: Supervised Machine Learning: Regression</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e11e79c5-abf8-44d3-a607-65baa8cf4964">Week 1</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#4021a3a7-ac94-4414-8714-1773c405e159">Course prerequisites</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#bcac1e99-c2bc-409c-9c73-220765e2d5c6">Introduction to supervised machine learning</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0f49428d-c99d-4f79-aa58-d9b8d605d4e5"><strong>Supervised machine learning: Approaches</strong></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ce0bf7d7-02bb-4e06-a2dd-041365f143ef">Linear Regression</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#21fc6b6c-811b-4994-a511-a3e6fe9ed1ce">Notes &amp; materials</a></div></nav><p id="dad8fc33-d629-4a83-b8c6-a75132397371" class="">
+</p><h1 id="7a786736-f18b-4f09-bc22-c1300ce8cfef" class="">Course #1: Exploratory data analysis for machine learning</h1><h2 id="5bc57350-0447-460d-8516-430184ad9182" class="">Week 1</h2><h3 id="9734ec89-5b10-4acb-8da0-a929cfa6dd49" class="">Course prerequisites</h3><ul id="d2dc91c5-56e3-4f5a-9ece-aa6a0309f52a" class="bulleted-list"><li style="list-style-type:disc">Familiarity with Python</li></ul><ul id="06698c93-47b8-4031-b06e-dfeb37ebe658" class="bulleted-list"><li style="list-style-type:disc">Familiar with Jupiter notebooks</li></ul><ul id="edc26e43-8b30-44a3-bf58-a7423a48a3b8" class="bulleted-list"><li style="list-style-type:disc">Fundamental understanding of Calculus, Linear Algebra, Probability, and Statistics</li></ul><h3 id="a6678be1-76f1-4cfc-9f30-84ddf3e36c6a" class="">Introduction to Machine Learning and Artificial Intelligence</h3><ol type="1" id="37c5aca6-5997-42e5-8295-4480c2c6577d" class="numbered-list" start="1"><li><strong>Definitions of AI, ML &amp; DL</strong><figure id="c12e2359-6bb2-41c0-8fe1-0137ce3fbb7e" class="image"><a href="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled.png"><img style="width:916px" src="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled.png"/></a></figure><p id="bf0e937b-2b4b-4412-899d-bd5e6afdb125" class="">
+</p><p id="19bc69b5-806a-4e3d-b1be-fb7af689b8e3" class=""><em>Machine learning</em> programs learn from repeatedly seeing data, rather than being explicitly programmed by humans.</p><p id="6304f9cc-9bd7-4f75-938d-f3b79f55cfa4" class="">2 types of ML: Supervised and Unsupervised</p><table id="b107b4a5-eeb0-4b36-8120-202aa372a7b0" class="simple-table"><thead class="simple-table-header"><tr id="0d30f9be-1931-4f51-a030-5365442d6436"><th id="WHm@" class="block-color-yellow_background simple-table-header" style="width:122.33333587646484px"></th><th id="HQGc" class="block-color-blue_background simple-table-header">Dataset</th><th id="&lt;Coe" class="block-color-blue_background simple-table-header">Goal</th><th id="OVYU" class="block-color-blue_background simple-table-header">Example</th></tr></thead><tbody><tr id="75b83f0a-ab18-4a27-a2ad-73ae0e4adbfb"><th id="WHm@" class="block-color-yellow_background simple-table-header" style="width:122.33333587646484px">Supervised</th><td id="HQGc" class="">Has target column</td><td id="&lt;Coe" class="">Make predictions</td><td id="OVYU" class="">Fraud detection</td></tr><tr id="22926828-b4f7-4e91-a96d-d152e094d2dd"><th id="WHm@" class="block-color-yellow_background simple-table-header" style="width:122.33333587646484px">Unsupervised</th><td id="HQGc" class="">It does not have a target column</td><td id="&lt;Coe" class="">Find structure in the Data</td><td id="OVYU" class="">Customer segmentation</td></tr></tbody></table><p id="5850bfb4-9830-4804-8702-2096f717b0a0" class=""><em>Deep learning </em>models determine the best representation of original data; in classic machine learning, humans must do this.</p></li></ol><ol type="1" id="ed760ebd-dff5-4c87-85f3-1a272587e20b" class="numbered-list" start="2"><li>Differentiate modern AI from prior AI</li></ol><ol type="1" id="af06e5ce-88fd-4dfc-814d-8dbd5bb67c40" class="numbered-list" start="3"><li>Relate sample applications of AI</li></ol><h3 id="9bb903b3-a7b5-4d6f-8aa2-a69685890cfa" class="">History of AI</h3><p id="c71252be-0336-4901-b660-324adc9765fb" class="">AI has experienced cycles of AI winters and AI booms.</p><p id="e1a6e36c-83e6-449b-ba7c-2df4f60e6aa7" class="">AI solutions include speech recognition, computer vision, assisted medical diagnosis, robotics, and others.</p><h3 id="5a09481a-bad8-4b99-b987-47aed1f9140e" class="">Modern AI: Applications &amp; Machine learning workflow</h3><p id="f3236a87-7761-4a7c-86e1-7db60985649c" class="">Machine learning workflow:</p><ul id="48f03165-2f72-47b9-86e3-daafa74bcebf" class="bulleted-list"><li style="list-style-type:disc">Background &amp; tools:<ul id="b8690955-de73-41a4-9662-e5d082225e4d" class="bulleted-list"><li style="list-style-type:circle">Python libraries (pandas, NumPy,…), Jupiter notebooks</li></ul><ul id="3b2d4cf6-6439-4966-b42e-2fd194682dbc" class="bulleted-list"><li style="list-style-type:circle">Basic statistics including probability, calculating moments, Bayer’s Rule</li></ul></li></ul><ul id="890e2c81-277a-42dc-a71d-06afd0cae8e3" class="bulleted-list"><li style="list-style-type:disc">Workflow:<ol type="1" id="d355d81c-628f-4b4d-b903-25771c22a221" class="numbered-list" start="1"><li>Problem statement (what problem are you trying to solve)</li></ol><ol type="1" id="a56fcc83-1f7d-480a-ab31-bcdaa0635efd" class="numbered-list" start="2"><li>Data collection (what data do you need to solve it)</li></ol><ol type="1" id="d7428ba5-6551-4814-a489-8d4c27ebc033" class="numbered-list" start="3"><li>Data exploration &amp; preprocessing (How should you clean your data so your model can use it)</li></ol><ol type="1" id="17474da0-5f06-46ce-b4e7-8f96b7ca469b" class="numbered-list" start="4"><li>Modeling (build a model to solve your problem)</li></ol><ol type="1" id="4aff0148-bc5f-4d31-823b-2c9ada9e4e37" class="numbered-list" start="5"><li>Validation (did you solve the problem)</li></ol><ol type="1" id="29a2eeca-d7c7-4652-a5fa-a480234208b6" class="numbered-list" start="6"><li>Decision-making &amp; Deployment (communicate to the stakeholder to put it into production)</li></ol></li></ul><p id="cf71e7d6-cdeb-48f3-be9c-2ece919916c8" class="">Machine learning vocabulary:</p><ul id="03c61ec7-a35a-4955-b622-b2e91b4b2007" class="bulleted-list"><li style="list-style-type:disc"><em>Target</em>: category or value that we are trying to predict</li></ul><ul id="cd47714c-6bd8-455c-9bef-9af781638a8d" class="bulleted-list"><li style="list-style-type:disc"><em>Feature</em>: properties of the data used for prediction (explanatory variables)</li></ul><ul id="9ecf4cdd-0537-4171-a2b7-61240288dc46" class="bulleted-list"><li style="list-style-type:disc"><em>Example/Observation</em>: a single data point within the data (one row)</li></ul><ul id="ef9a07c7-4cdc-4899-8963-2512f6cb0f2c" class="bulleted-list"><li style="list-style-type:disc"><em>Label</em>: the target for a single data point</li></ul><p id="6466f581-0b65-4339-9221-7539ccba3080" class="">
+</p><h2 id="9890c43c-41f0-4c02-89dd-e31506dfe7fb" class="">Week 2</h2><h3 id="533f501a-0205-4cad-b986-4222773fb10b" class="">Retrieving data</h3><p id="78707c8e-8f3d-4870-b704-78682b37cc58" class="">Learning goals:</p><ul id="b7bfefb5-5b7f-46b1-a7a3-55146932b18f" class="bulleted-list"><li style="list-style-type:disc">Retrieving data from multiple data sources:<ul id="47f1f687-e595-4e9d-bb8a-e38c4994570f" class="bulleted-list"><li style="list-style-type:circle">SQL databases</li></ul><ul id="38c794a8-acf5-4c7c-96ad-14459b410dc1" class="bulleted-list"><li style="list-style-type:circle">NoSQL databases</li></ul><ul id="1d21f41f-0d84-45ff-a9fb-460048f7eae1" class="bulleted-list"><li style="list-style-type:circle">APIs</li></ul><ul id="52d40936-28f3-41a3-b664-7a69fd4769ae" class="bulleted-list"><li style="list-style-type:circle">Cloud data sources</li></ul></li></ul><ul id="acf28c82-4b4a-4869-8e33-e9a1343630de" class="bulleted-list"><li style="list-style-type:disc">Understanding common issues that arise with importing data</li></ul><p id="5e6b0589-4e89-4b7f-beb3-e78c36436661" class=""><strong>Reading CSV files</strong></p><p id="3e588be5-5fea-44da-a123-36f7c85591c8" class="">Using <em>pd.read_csv(filepath)</em> function.</p><p id="fd79cb2c-2dcc-4cd6-9f95-8fbd2d68ab7c" class="">Useful arguments:</p><ul id="a77c5311-6659-489a-82c1-4b73832362d2" class="bulleted-list"><li style="list-style-type:disc">Different delimiters:<ul id="83395875-8a20-4ed0-acfe-9a70f6475786" class="bulleted-list"><li style="list-style-type:circle">tab-separated file: <em>pd.read_csv(filepath, </em><strong><em>sep=’\t’</em></strong><em>)</em></li></ul><ul id="983d5626-82d1-4847-97c2-f3bc5c689810" class="bulleted-list"><li style="list-style-type:circle">space-separated file: <em>pd.read_csv(filepath, </em><strong><em>delim_whitespace=True</em></strong><em>)</em></li></ul></li></ul><ul id="9bf994f1-579d-4c7b-94c2-97e50f07d7d0" class="bulleted-list"><li style="list-style-type:disc">Don’t use first row for column names: <em>pd.read_csv(filepath, </em><strong><em>header=None</em></strong><em>)</em></li></ul><ul id="2c1e5aa6-4f5c-4408-b2c7-afe987d13206" class="bulleted-list"><li style="list-style-type:disc">Specify column names: <em>pd.read_csv(filepath, </em><strong><em>names=[’Name1’, ‘Name2’]</em></strong><em>)</em></li></ul><ul id="4ea2b76c-9e56-429e-bbf6-1e7a9e530c57" class="bulleted-list"><li style="list-style-type:disc">Custom missing values: <em>pd.read_csv(filepath, </em><strong><em>na_values=[’NA’, 99]</em></strong><em>)</em></li></ul><p id="00198dd0-dbfa-4925-b93c-70ab7974a071" class=""><strong>Reading JSON files</strong></p><p id="afa413b9-1d1d-4886-bf8d-947d4387ca16" class="">Using <em>pd.read_json(filepath).</em></p><p id="3208dafd-e046-4536-a3eb-eb8712e94ce9" class="">Write dataframe file to JSON: <em>data.to_json(filepath).</em></p><p id="a55aa241-b4e1-4670-bcf0-f0ed291f90ea" class=""><strong>SQL databases</strong></p><p id="19c4bf81-9e10-4bbe-a613-bf842d0a81f1" class="">Retrieving data from SQL databases using pandas and SQLite3.</p><pre id="086814d1-16e9-4982-9ec8-40a9e12ceabe" class="code"><code>import sqlite3 as sq3
+import pandas as pd
+
+# Initialize path to SQLite database
+path = &#x27;data/classic_rock.db&#x27;
+
+# Create connection to SQL database
+con = sq3.Connection(path)
+
+# Write query
+query = &#x27;&#x27;&#x27; 
+	SELECT * FROM rock_songs
+&#x27;&#x27;&#x27;
+
+# Execute query
+data  = pd.read_sql(query, con)</code></pre><p id="606f65b1-af05-4d7b-99ce-249efed65c55" class=""><strong>NoSQL database</strong></p><p id="a52d123b-93fd-4869-b365-8c78ac58bb6f" class="">Examples of NoSQL databases:</p><ul id="79377cbd-c6c6-43f5-9234-57553331ea9d" class="bulleted-list"><li style="list-style-type:disc"><strong>Document databases</strong>: MongoDB, CouchDB</li></ul><ul id="f41581d2-fcea-439f-8129-cd9e44837a7a" class="bulleted-list"><li style="list-style-type:disc"><strong>Key-value stores</strong>: Riak, Voldemort, Redis</li></ul><ul id="07657d78-1b5e-4615-9142-808820789ade" class="bulleted-list"><li style="list-style-type:disc"><strong>Graph databases</strong>: Neo4j, HyperGraph</li></ul><ul id="f8e276fe-3188-461e-a13a-a76d9e94d251" class="bulleted-list"><li style="list-style-type:disc"><strong>Wide-column stores</strong>: Cassandra, HBase</li></ul><p id="89177dd4-951d-4324-a8b5-908e0009d7ea" class="">Retrieving data from MongoDB using pymongo.</p><pre id="7dd346c9-2fa8-403e-b227-bce6c19739eb" class="code"><code># SQL data imports
+from pymongo import MongoClient
+
+# Create a Mongo connection
+con = MongoClient()
+
+# Choose database (con.list_database_name() 
+# will display available databases)
+db = con.database_name
+
+# Create a cursor object using a query
+cursor = db.collection_name.find(query)
+
+# Expand cursor and construct DataFrame
+df = pd.DataFrame(list(cursor))</code></pre><p id="13228285-58bc-4fde-9f21-8c1c58973cdc" class=""><strong>APIs and Cloud Data Access</strong></p><h3 id="2b5bbffc-469b-43b4-ac8a-2c115d88a8ee" class="">Data cleaning</h3><p id="5027b48d-e5ef-4291-b4d0-741852778a96" class="">Learning goals:</p><ul id="a7527274-959c-465d-894f-dd129642b151" class="bulleted-list"><li style="list-style-type:disc">Why data cleaning is important for ML</li></ul><ul id="55cb95d0-15c0-4019-8d35-fcd390715258" class="bulleted-list"><li style="list-style-type:disc">Issues that arise with messy data</li></ul><ul id="6be9d02b-f427-499d-bf67-4196dd509d56" class="bulleted-list"><li style="list-style-type:disc">How to identify duplicate or unnecessary data</li></ul><ul id="907ad713-229f-4677-b7fd-6e50ceb95077" class="bulleted-list"><li style="list-style-type:disc">Policies for dealing with outliers</li></ul><p id="d488c715-b84a-45c5-b352-0dc8ebd160e0" class=""><strong>Why is data cleaning so important?</strong></p><p id="84edc158-f4f9-49de-a7e7-237356d0afa8" class="">Decisions and analytics are increasingly driven by data and models.</p><p id="2ddc51f4-a87e-4000-a72d-46e39bde1011" class="">Messy data can lead to a “garbage-in, garbage-out” effect, and unreliable outcomes.</p><p id="0550d016-4440-4d85-8365-310fb9c396a0" class="">The main data problems companies face:</p><ul id="7b23e45f-8c43-4081-b256-34179c862dcb" class="bulleted-list"><li style="list-style-type:disc">Lack of data</li></ul><ul id="fbdf905d-e5ca-4e09-85e1-4831f717543e" class="bulleted-list"><li style="list-style-type:disc">Too much data</li></ul><ul id="c20fcac0-16a4-4319-9b2b-670047f0fe27" class="bulleted-list"><li style="list-style-type:disc">Bad data</li></ul><p id="85ff5e5d-f405-49db-a3e6-b45b97c02d32" class=""><strong>How can data be messy?</strong></p><ul id="a121bc8b-75d8-4a4f-a851-18c87dc084ab" class="bulleted-list"><li style="list-style-type:disc">Duplicate or unnecessary data</li></ul><ul id="f99a40ae-da87-4861-be85-50c59dd16aae" class="bulleted-list"><li style="list-style-type:disc">Inconsistent text and typos</li></ul><ul id="a611feee-b9bc-4602-acc7-10f211547583" class="bulleted-list"><li style="list-style-type:disc">Missing data</li></ul><ul id="7a5ce75c-56ca-4a88-a12c-5fafcc772992" class="bulleted-list"><li style="list-style-type:disc">Outliers</li></ul><ul id="0efe2ec6-4b6f-4e84-9430-1ad8a4dc482e" class="bulleted-list"><li style="list-style-type:disc">Data sourcing issues</li></ul><ul id="0b957a73-1049-42e8-a27c-4c77a7e9c7e6" class="bulleted-list"><li style="list-style-type:disc">….</li></ul><p id="41f3a580-fd50-43d3-ac41-45b664e2ed39" class=""><strong>Duplicate or unnecessary data</strong></p><p id="00c7d545-3e39-4887-bfa7-26af5b33e080" class="">Pay attention to duplicate values and research why there are multiple values.</p><p id="44b1dc7c-1573-4729-a62a-a01df43f74d8" class=""><strong>Policies for missing data</strong></p><ul id="3338e0f9-e67d-409a-bfab-20fa6c185f30" class="bulleted-list"><li style="list-style-type:disc">Remove the data: remove the row(s) entirely</li></ul><ul id="665ecada-2368-4107-9673-e7f297a23ae2" class="bulleted-list"><li style="list-style-type:disc">Impute the data: replace it with substituted values. Fill in the missing data with the most common value, the average value, etc.</li></ul><ul id="152b0fd3-c4b0-46ab-b384-21d869517887" class="bulleted-list"><li style="list-style-type:disc">Mask the data: create a category for missing values.</li></ul><p id="daf9ec60-4d3d-4e2c-b35c-9f76706a62aa" class=""><strong>Outliers</strong></p><p id="ccce13b9-81cb-49fe-8a3a-e21f4e96b471" class="">An outlier is an observation in data that is distant from most other observations.</p><p id="27d4ab2c-73c2-4a38-9bbc-5b8965250179" class="">Typically, these observations are aberrations and do not accurately represent the phenomenon we are trying to explain through the model.</p><p id="4806efb8-7726-481f-af54-a2ab92a3d12d" class="">If do not identify and deal with outliers, they can have a significant impact on the model.</p><p id="e26e7d71-80b7-4bbb-8a9c-5888d2325112" class="">It is important to remember that some outliers are informative and provide insights into the data. </p><p id="05e23d33-5f34-4467-a71a-cf82f4dc0007" class=""><strong>How to find outliers?</strong></p><ul id="44b2ba61-0220-46d4-b9eb-4f636a5a99de" class="bulleted-list"><li style="list-style-type:disc">Plots</li></ul><ul id="190e3169-775b-47d8-97b3-4c906585e190" class="bulleted-list"><li style="list-style-type:disc">Statistics<pre id="e964ecad-a453-4d58-be25-23d9700f76fd" class="code"><code>import NumPy as np
+
+# Calculate the interquartile range
+q25, q50, q75 = np.percentile(data, [25, 50, 75])
+iqr = q75 - q25
+
+# Calculate the min/max limits to be considered an outlier
+min = q25 - 1.5*iqr
+max = q75 + 1.5*iqr
+
+print(mix, q25, q50, q75, max)
+
+[x for x in data[&#x27;Unemployment&#x27;] if x &gt; max]</code></pre></li></ul><ul id="e95fb80e-9db1-4739-a464-ee034e9497bc" class="bulleted-list"><li style="list-style-type:disc">Residuals<p id="ccf0fc7f-528b-427f-8277-e2eee05eacf4" class="">Residuals (differences between actual and predicted values of the outcome variable) represent model failure.</p><p id="02dd0eb4-c242-49a7-b04e-e049711d3231" class="">Approaches to calculating residuals:</p><ul id="ad6ba364-7e1b-4b1f-b143-a322970a4383" class="bulleted-list"><li style="list-style-type:circle">Standardized: residual divided by the standard error.</li></ul><ul id="efbcbb16-a5a4-4b4b-9487-1f91d9645229" class="bulleted-list"><li style="list-style-type:circle">Deleted: residual from fitting the model on all data excluding current observation.</li></ul><ul id="e1559e7e-ef7a-4361-9722-31b691834fd8" class="bulleted-list"><li style="list-style-type:circle">Studentized: Deleted residuals divided by residual standard error (based on all data, or all data excluding current observation)</li></ul></li></ul><p id="9c93e1d7-6bf3-4149-a6a7-354a67fb60ca" class=""><strong>Policies for outliers </strong></p><ul id="a55bba4b-55f2-4566-afe6-8c3fd7782db1" class="bulleted-list"><li style="list-style-type:disc">Remove them</li></ul><ul id="451fbf82-3422-4aa5-91b4-b1365eae39fe" class="bulleted-list"><li style="list-style-type:disc">Assign the mean or median value</li></ul><ul id="d103ea24-620b-4b90-a532-d28c8a7f28e8" class="bulleted-list"><li style="list-style-type:disc">Transform the variable</li></ul><ul id="7cb935a3-8121-46cb-a135-3e6ac3a6e392" class="bulleted-list"><li style="list-style-type:disc">Predict what value should be</li></ul><h2 id="6f6368ab-cbf3-4453-a21f-7c687aa617a3" class="">Week 3</h2><h3 id="e154f233-a9f2-43da-af7a-aa358cb27d3f" class="">Exploratory data analysis (EDA)</h3><p id="f9057339-a1ba-4a2b-b413-da581df88a1c" class="">Learning goals:</p><ul id="1bbb3ffe-4063-459d-ac84-5f754967dcea" class="bulleted-list"><li style="list-style-type:disc">Approaches to conducting EDA</li></ul><ul id="354e98d4-db13-4813-928b-4b6c7e45e6f9" class="bulleted-list"><li style="list-style-type:disc">EDA techniques</li></ul><ul id="a24a571b-15cf-4e3c-b756-58928c0d416d" class="bulleted-list"><li style="list-style-type:disc">Sampling from DataFrames</li></ul><ul id="bc8d6b54-bf9b-43a4-a5e7-15eb3a57fd65" class="bulleted-list"><li style="list-style-type:disc">Producing EDA visualizations</li></ul><p id="5d6caffa-a9ea-45ef-8d15-69e607518694" class=""><strong>Exploratory Data Analysis</strong></p><p id="91e60377-52f1-4d5d-9904-76a7e0cb2f60" class="">EDA is an approach to analyzing data sets to summarize their main characteristics, often visual methods.</p><p id="26b061f6-3502-4fa2-a020-0b62f5764b9a" class="">EDA allows getting an initial feel for data. This lets us determine if the data makes sense. or if further cleaning or more data is needed.</p><p id="d86bee13-7fee-4990-b4d4-bac584837ad8" class="">EDA helps to identify patterns and trends in the data. </p><p id="c26f2a79-456c-44d1-ab5d-c711b18bfa4b" class="">Techniques for EDA:</p><ul id="28e3cf15-d240-4cfa-bdaf-f005f00bb284" class="bulleted-list"><li style="list-style-type:disc">Summarize statistics</li></ul><ul id="13131690-be2c-4de2-9ee9-f611ca94a384" class="bulleted-list"><li style="list-style-type:disc">Visualizations</li></ul><p id="c2f26cc9-42ee-41ef-a9b1-39ceb90dcdee" class=""><strong>EDA with visualization</strong></p><p id="4ab7a38f-6c21-4ba6-8e18-e2187b4234b4" class="">Scatter plots with Matplotlib:</p><pre id="a2f3517a-36b5-4325-9bfd-8b120662eab6" class="code"><code># Pandas DataFrame approach
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.plot(data.x, data.y, ls=&#x27;&#x27;, marker=&#x27;o&#x27;)</code></pre><p id="68c22957-d71c-4e70-a5e9-c8b3a9aea97b" class="">Customizing plots</p><pre id="457688ad-865b-4500-a366-71fc37f62008" class="code"><code># matplotlib syntax
+fig, ax = plt.subplots()
+ax.barh(np.arange(10), data.x.iloc[:10])
+
+# Set position of ticks and tick labels
+ax.set_yticks(np.arange(0.4, 10.4, 1.0))
+ax.set_yticklabels(np.arange(1, 11))
+ax.set(xlabel=&#x27;xlabel&#x27;, ylabel=&#x27;ylabel&#x27;, title=&#x27;title&#x27;)</code></pre><figure id="ae7c83d5-c630-4c81-8532-f1aee6d0b9b2" class="image"><a href="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled%201.png"><img style="width:434px" src="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled%201.png"/></a></figure><p id="e6812e38-e0de-41e9-9ccc-94ec70a8ddb1" class="">
+</p><p id="b4f052d6-9129-4ac1-a2a1-d00dbba64b7e" class=""><strong>Grouping data for EDA</strong></p><p id="7fe0dd8a-5a9a-43dd-9ab2-3a16070c8913" class="">Customizing plots by group</p><pre id="0cf02e30-16ca-4283-8c0a-2fe8d804ff93" class="code"><code>data.groupby(&#x27;species&#x27;).mean().plot(color=[&#x27;red&#x27;,&#x27;blue&#x27;,&#x27;black&#x27;,&#x27;green&#x27;],
+																		fontsize=10.0, figsize=(4,4)
+																		)</code></pre><p id="f5f97f62-cb1c-4b8b-a608-2c847046e481" class="">Pair plots for features </p><pre id="634411f0-0d53-4bc8-9a82-65e4a7f5e88b" class="code"><code># Seaborn plot, feature correlations
+sns.pairplot(data, hue=&#x27;species&#x27;, size=3)</code></pre><p id="ac7e1ec8-eb02-483a-84c9-fac12b24495f" class="">Seaborn Example: </p><ul id="b7449065-e10c-4aef-8451-f51d76394945" class="bulleted-list"><li style="list-style-type:disc">Hexbin plot</li></ul><pre id="f38a5f5b-0f71-46b5-8150-cdc59a61692a" class="code"><code># Seaborn hexbin plot
+sns.jointplot(x=data.x, y=data.y, kind=&#x27;hex&#x27;)</code></pre><ul id="c50ff3d8-87c5-48be-9f4a-a9eb96f0492e" class="bulleted-list"><li style="list-style-type:disc">Facet grid</li></ul><pre id="b0b25bac-d3f5-4701-8cdb-d79d596a299c" class="code"><code># Seaborn plot, facet grid
+# First plot statement
+plot = sns.FacetGrid(data, col=&#x27;species&#x27;, margin_titles=True)
+plot.map(plt.hist, &#x27;x&#x27;, color=&#x27;green&#x27;)
+
+# Second plot statement
+plot = sns.FacetGrid(data, col=&#x27;species&#x27;, margin_titles=True)
+plot.map(plt.hist, &#x27;y&#x27;, color=&#x27;green&#x27;)</code></pre><h3 id="80379232-31cf-4f95-840c-e12b40e6d0be" class="">Feature engineering and Variable transformation</h3><p id="88e45bef-d066-4851-8d16-f24377fb3893" class="">Learning goals:</p><ul id="f80fe0d3-8516-47bc-b83c-3c40f80d9492" class="bulleted-list"><li style="list-style-type:disc">Feature engineering and variable transformation</li></ul><ul id="f11a4e73-c739-446c-bec6-10a74f63e38c" class="bulleted-list"><li style="list-style-type:disc">Feature encoding</li></ul><ul id="15c43ea6-af9e-4338-9167-9ae27142c79b" class="bulleted-list"><li style="list-style-type:disc">Feature scaling</li></ul><p id="5c012ecc-4c64-49b1-aaf1-ee1a1dd57522" class=""><strong>Background</strong></p><p id="dea5ce60-9074-478c-842b-7659478341a6" class="">Models used in Machine learning workflows often make assumptions about the data.</p><p id="2e147ef1-8feb-4b44-90b5-faea3459aadc" class=""><strong>Variable transformation</strong></p><p id="df98c8cc-05c6-49c8-b8d2-38dae1db90d3" class="">Predictions from linear regression models assume residuals are normally distributed.</p><p id="2e44661d-db7f-4e02-bf1c-1c539650bc82" class="">Features and predicted data are often skewed (distorted away from the center).</p><p id="c40b3e1a-d4b0-4b7c-9ad2-850c52a6f83b" class="">Data transformations can solve this issue.</p><p id="ad2f95cc-22f8-424b-9a7b-396a2b10eb3b" class="">Transformation of data distributions:</p><ul id="e81cbff9-9249-434e-a69e-d6f8efdc7859" class="bulleted-list"><li style="list-style-type:disc">Log transformation<p id="c4d7909a-42f7-452f-89df-81a608953064" class="">Can be useful for linear regression.</p></li></ul><ul id="269b831a-0b53-4518-bee6-f2e27042c9be" class="bulleted-list"><li style="list-style-type:disc">Polynomial features<pre id="a8e50148-0d09-46e5-b54c-df6423e37eaa" class="code"><code># Import the class containing the transformation method
+from sklearn.preprocessing import PolynomialFeatures
+
+# Create an instance of the class (choose number of degree)
+polyFeat = PolynomialFeatures(degree=2)
+
+# Create the polynomial features and then transform the data
+polyFeat = polyFeat.fit(X_data)
+X_poly = polyFeat.transform(X_data)</code></pre></li></ul><p id="172ef0e4-ef9a-48b8-95e4-f70d10c292e4" class=""><strong>Variable Selection</strong></p><p id="39a34bea-c107-48af-9304-f136df8e3e55" class="">Variable selection involves choosing the set of features to include in the model.</p><p id="cc7386f0-fe2e-4f64-9ef6-ad526c375cf3" class="">Variables must often be transformed before they can be included in the models.</p><p id="3b070387-3703-460b-b05e-05d10a230715" class="">In addition to log and polynomial transformations, this can involve:</p><ul id="15fb69cb-7501-4e87-8e40-ac3004063423" class="bulleted-list"><li style="list-style-type:disc"><em>Encoding</em>: converting non-numeric features to numeric features.</li></ul><ul id="0cdf1501-c68e-4e04-ba96-9cf5b7fbf1fb" class="bulleted-list"><li style="list-style-type:disc"><em>Scaling</em>: converting the scale of numeric data so they are comparable.</li></ul><p id="802467d6-32bf-4dda-adc2-1f0922ed02d5" class="">The appropriate method of scaling or encoding depends on the type of features.</p><p id="2bc18628-1c8a-4a6a-b714-a1fc705a023a" class=""><strong>Feature encoding</strong></p><p id="de492e76-58df-40dc-ba60-fb01cfa8a34b" class="">2 primary types:</p><ul id="f0fbf767-32df-44b3-a79b-26339a65026b" class="bulleted-list"><li style="list-style-type:disc"><em>Nominal</em>: categorical variables take values in unordered categories (e.g. red, blue, green; true, false).</li></ul><ul id="cc2d37c0-0e32-415e-a728-a5f9fa28464a" class="bulleted-list"><li style="list-style-type:disc"><em>Ordinal</em>: categorical variables take values in ordered categories (e.g. high, medium, low).</li></ul><p id="1b52d2c0-a29f-4a79-90d9-6d3469451ae8" class="">Approaches:</p><ul id="758a8723-a8e4-4fd0-8370-8a02bca027df" class="bulleted-list"><li style="list-style-type:disc"><em>Binary encoding</em>: converts variables to either 0 or 1 is suitable for variables that take two possible values (e.g. true, false).</li></ul><ul id="90ef8218-87ce-4393-8d52-464dcade89ae" class="bulleted-list"><li style="list-style-type:disc"><em>One-hot encoding</em>: converts variables that take multi values into binary (0, 1) variables, one for each category. This creates several new variables.</li></ul><ul id="801d2e3f-f896-426d-bc85-c96c0f312050" class="bulleted-list"><li style="list-style-type:disc"><em>Ordinal encoding</em>: involves converting ordered categories to numerical values, usually by creating one variable that takes an integer equal to the number of categories (e.g. 0, 1, 2, …).</li></ul><p id="2c13ae49-32f3-408e-b346-12129538d128" class=""><strong>Feature scaling</strong></p><p id="55a96c29-feff-4e4d-860b-c8bdb547906d" class="">Feature scaling involves adjusting a variable’s scale. This allows comparison of variables with different scales.</p><p id="f75dff20-c3ed-4ea6-bad2-423327047df0" class="">Common approaches:</p><ul id="b3884d90-3514-454b-91ba-59bed2ed72e7" class="bulleted-list"><li style="list-style-type:disc"><em>Standard scaling</em>: converts features to standard normal variables (by subtracting the mean and dividing by the standard error).</li></ul><ul id="370589a6-9415-4036-9be1-c1c3519d5efb" class="bulleted-list"><li style="list-style-type:disc"><em>Min-max scaling</em>: converts variables to continuous variables in the (0, 1) interval by mapping minimum values to 0 and the maximum values to 1.<p id="28e847ad-613a-49be-a254-143f076dc91b" class="">This type of scaling is sensitive to outliers.</p></li></ul><ul id="70e46224-7716-4b42-af2c-c84986858cb6" class="bulleted-list"><li style="list-style-type:disc"><em>Robust scaling:</em> is similar to min-max scaling, but instead maps the interquartile range to (0, 1).<p id="566b3e28-69a5-45f7-9127-faf11cde0c42" class="">This means the variable itself takes the values outside of the (0, 1) interval.</p></li></ul><p id="8fc720c2-b6ea-4a04-94ac-634b9ad4cb53" class=""><strong>Common variable transformations</strong></p><table id="e21306c6-0bc0-492d-827a-14ae037a9abc" class="simple-table"><thead class="simple-table-header"><tr id="580a965a-463f-4e2f-906d-cd36ee8f4982"><th id="evSa" class="simple-table-header-color simple-table-header" style="width:359.8833312988281px"><strong>Feature type</strong></th><th id="D[hK" class="simple-table-header-color simple-table-header" style="width:357px"><strong>Transformation</strong></th></tr></thead><tbody><tr id="602aa206-c7e2-44d2-a468-fc6aafaeb9dc"><td id="evSa" class="" style="width:359.8833312988281px"><em>Continuous</em>: numerical values</td><td id="D[hK" class="" style="width:357px">Standard, min-max, robust scaling</td></tr><tr id="4625f9a5-fd8f-4066-a283-09a4629e426c"><td id="evSa" class="" style="width:359.8833312988281px"><em>Nomial</em>: categorical, unordered features (true or false)</td><td id="D[hK" class="" style="width:357px">Binary, One-hot encoding (0, 1)</td></tr><tr id="13a4ae9c-d4ae-495f-acc9-bb8a010683ac"><td id="evSa" class="" style="width:359.8833312988281px"><em>Ordinal</em>: categorical, ordered features (movie ratings)</td><td id="D[hK" class="" style="width:357px">Ordinal encoding (0, 1, 2, …)</td></tr></tbody></table><pre id="3a29ce9d-149f-4bf4-8a79-8be53c7fb410" class="code"><code># Useful functions for scaling variables
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+
+# Useful functions for categorical vairables
+from sklearn.preprocessing import LabelEncoder, LabelBinarizer, OneHotEncoder
+from pandas import get_dummies
+
+# Useful functions for encoding ordinal variables
+from sklearn.feature_extraction import DictVectorzier
+from sklearn.preprocessing import OrdinalEncoder</code></pre><h2 id="d318a0eb-d5cb-4fa4-9198-3e0894cd6907" class="">Week 4</h2><h3 id="39b60192-f6b6-4558-ae53-9c1853fbccf8" class="">Estimation and inference</h3><p id="7ba2967a-67fc-4e8b-96bf-92311b9966ce" class="">Learning goals:</p><ul id="7dab1d4c-a972-4b9e-8f1f-901fc4ea57b0" class="bulleted-list"><li style="list-style-type:disc">Statistical estimation and inference</li></ul><ul id="d62aa4e7-263e-4f52-a186-8211db638c0c" class="bulleted-list"><li style="list-style-type:disc">Parametric and non-parametric approaches to modeling</li></ul><ul id="0c5ca5ef-2984-430d-a1af-aad2c94e3d74" class="bulleted-list"><li style="list-style-type:disc">Common statistical distributions</li></ul><ul id="559aab70-d088-4d93-bca7-3566621d9213" class="bulleted-list"><li style="list-style-type:disc">Frequentist vs. Bayesian statistics</li></ul><p id="2dd61ca1-1acc-4b7f-bbe1-e42f5e3d536d" class=""><strong>Estimation vs. Inference</strong></p><p id="a0d87eb7-1f5d-431c-8436-cd6bf4f50a52" class=""><em>Estimation</em> is the application of an algorithm.</p><p id="dde23249-1377-4cd0-9867-512cff076c1f" class=""><em>Inference</em> involves putting an accuracy on the estimate.</p><p id="0bd57e2b-cd46-4091-b75b-de31610a25c6" class=""><strong>Parametric vs. Non-parametric</strong></p><p id="5eebaac3-97f6-4622-9655-5f06af8fec38" class="">If the inference is about trying to find out the Data-Generating Process (DGP), then we can say that a statistical model (of the data) is a set of possible distributions of maybe even regressions.</p><p id="ba9c320c-1ea3-4828-a966-a510504ed3fd" class="">A <em>parametric</em> model is a particular type of statistical model: it’s also a set of distributions or regressions, but they have a finite number of parameters.</p><p id="38bc75be-6abf-47c1-b96b-c84ea6adb7e8" class=""><em>Example</em>: Customer lifetime value</p><p id="129882a1-31ef-48ce-b944-2cd39cdabbb3" class="">Customer lifetime value is an estimate of the customer’s value to the company</p><p id="5a0b616f-9300-4d7a-91ef-b1b49a7b2eba" class="">Data related to customer lifetime value might include:</p><ul id="ce686d24-0e3c-44ea-ae6e-bb1418529ddb" class="bulleted-list"><li style="list-style-type:disc">The expected length of time as a customer.</li></ul><ul id="92178f4a-88f7-4e14-9092-484c605e9536" class="bulleted-list"><li style="list-style-type:disc">The expected amount spent over time.</li></ul><p id="213701d9-3b01-421e-ac9e-ae3ba9d959fe" class="">To estimate lifetime value, we make assumptions about the data.</p><p id="61cca7a2-6b8a-41c0-8c7f-5c781d811628" class="">These assumptions can be parametric (assuming a specific distribution), or non-parametric.</p><p id="5a35a29a-644e-4cb1-b505-f0c0b15542ba" class=""><strong>Commonly used distributions</strong></p><ul id="5bd6937c-2b1b-4ac0-99e8-8da922b2f36a" class="bulleted-list"><li style="list-style-type:disc">Gaussian/Normal</li></ul><ul id="7bc8d7a0-b981-41bd-a3b6-1e3bc7f3aa4b" class="bulleted-list"><li style="list-style-type:disc">Log normal</li></ul><ul id="4b90281a-6b6f-42b7-a908-e877f3036072" class="bulleted-list"><li style="list-style-type:disc">Exponential</li></ul><ul id="a3e08c23-e918-487e-8aae-5d8424580c9d" class="bulleted-list"><li style="list-style-type:disc">Poisson</li></ul><p id="03740006-7eaa-4874-b9d4-4cde56e05602" class=""><strong>Frequentist vs. Bayesian Statistics</strong></p><p id="1dd437b1-56e2-4040-8525-11f1b40d4e15" class="">A <em>frequentist</em> is concerned with repeated observations in the limit.</p><p id="1684b353-93cc-49bb-a5cd-351e093ceaa8" class="">Processes may have true frequencies, but we’re interested in modeling probabilities as many, many repeats of an experiment.</p><p id="bff665d3-adb0-4370-985c-6cf819edc22f" class="">Frequentist approach:</p><ol type="1" id="2537604e-0978-405e-836d-a382a04b51cd" class="numbered-list" start="1"><li>Derive the probabilistic property of a procedure.</li></ol><ol type="1" id="75612714-a5c4-4e21-8469-a8c56aef9fd9" class="numbered-list" start="2"><li>apply the probability directly to the observed data.</li></ol><p id="b6a84e8a-9e99-45d5-9306-9f49cf0d7c7e" class="">A <em>bayesian</em> describes parameters by probability distributions.</p><p id="67016af6-f9c6-4977-981d-8325dafa516d" class="">Before seeing any data, a prior distribution (based on the experimenters’ belief) is formulated.</p><p id="483ca81c-c1c7-44a3-b141-499de543ee28" class="">This prior distribution is then updated after seeing data (a sample from the distribution).</p><p id="a395edb1-6776-421e-a3cd-14513f6cc520" class="">After updating, the distribution is called the posterior distribution.</p><h3 id="03d428ea-1bbc-4573-baf8-6be333a14f73" class="">Hypothesis testing</h3><p id="8d07e9b1-e3d3-46c7-b760-f79a8267f770" class="">Learning goals:</p><ul id="ddc2070a-3b75-43c5-95be-df47480044ae" class="bulleted-list"><li style="list-style-type:disc">Overview of hypothesis testing</li></ul><ul id="e9bffffe-2b7a-4321-b147-247f3318d25f" class="bulleted-list"><li style="list-style-type:disc">Bayesian approach to hypothesis testing</li></ul><ul id="2503450a-3ac6-4811-b09f-780628f3e7f3" class="bulleted-list"><li style="list-style-type:disc">An example of hypothesis testing involving coin-tossing</li></ul><p id="fb91fec5-9faf-4d9e-88a3-9280e63af5fe" class=""><strong>Hypothesis testing</strong></p><p id="ba49a4d8-c05d-4e6b-b876-70e3d29f3d75" class="">A <em>hypothesis</em> is a statement about a population parameter.</p><p id="23281633-39fc-4712-abcd-1270734d3271" class="">Creating two hypotheses:</p><ul id="96f5d02a-08ff-48e0-beed-028e58105f6d" class="bulleted-list"><li style="list-style-type:disc">The <em>null hypothesis</em> (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>)</li></ul><ul id="972c201f-f322-4813-aaa2-eef33ff790e4" class="bulleted-list"><li style="list-style-type:disc">The <em>alternative hypotheses</em> (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> or <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">H_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>)</li></ul><p id="afe3ec9f-0766-40f7-be2c-50826f102740" class="">Then decide which one to call the null depending on how the problem is set up.</p><p id="2010458c-0eac-4a58-a0b9-8d5de843b0c4" class=""><strong>Hypothesis testing: decision rules</strong></p><p id="a82e4103-648c-42c2-9056-8a38290fc7ea" class="">A hypothesis testing procedure gives us a rule to decide:</p><ul id="183fae5c-1b32-4da0-8daa-ad164b5e5a48" class="bulleted-list"><li style="list-style-type:disc">For which values of the test statistic do we accept <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</li></ul><ul id="bec84e23-7e06-4273-9894-5a791889ef29" class="bulleted-list"><li style="list-style-type:disc">For which values of the test statistic do we reject <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> and accept <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</li></ul><p id="efd6c940-f242-4577-a5aa-482db9ad98b2" class="">Hypothesis testing is used in order to decide which of two paths to take in the project.</p><p id="b2b6dd37-86a3-4b54-b8e6-401a400a55cc" class=""><strong>Hypothesis testing: Bayesian approach</strong></p><p id="4d753ad7-1708-4900-b8c1-28329c69c273" class="">In the Bayesian interpretation, we don’t get a decision boundary.</p><p id="40beca1d-e924-419d-b5c5-bf7815c7249c" class="">Instead, we get updated (posterior) probabilities.</p><h3 id="8fdd06e9-6bc6-4fe1-b562-6741c20b58b5" class=""><strong>Type 1 vs. Type 2 error</strong></h3><p id="fa2e457e-e4b5-4d4e-8d12-c6449fb0bf40" class="">Learning goals:</p><ul id="13f5b062-8992-4954-8e0c-b6b379002bca" class="bulleted-list"><li style="list-style-type:disc">Hypothesis testing terminology includes Type 1 and Type 2 errors.</li></ul><ul id="c43a915f-e304-41a4-aeb5-9e73a35e9ecf" class="bulleted-list"><li style="list-style-type:disc">Examples of hypothesis tests in practice.</li></ul><p id="cb91fc7b-159e-4c10-8ef1-7e92fce48bbc" class=""><strong>Neyman-Pearson interpretation</strong></p><p id="a4c20799-85a2-4b18-985d-0e7c08952207" class="">The <em>Neyman-Pearson paradigm</em> (1933) is non-Bayesian.</p><p id="e3e7531d-7ce3-464a-af85-e3dae6b1126d" class="">This gives an up or down vote on <a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a> vs <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</p><p id="5ca62a1f-1e02-4158-80ce-723810b9ad77" class="">Terminology:</p><table id="5dfd2726-0be1-46f8-a2ad-62e701cf3f13" class="simple-table"><thead class="simple-table-header"><tr id="05a372fb-914e-41b2-bbab-ddb5a204513a"><th id="OzYz" class="simple-table-header-color simple-table-header" style="width:166.75px"></th><th id="W]wp" class="simple-table-header-color simple-table-header" style="width:166.75px"></th><th id="@Gz;" class="simple-table-header-color simple-table-header" style="width:166.75px">Decision</th><th id="@l&gt;&lt;" class="simple-table-header-color simple-table-header" style="width:166.75px"></th></tr></thead><tbody><tr id="38808412-3576-4a27-b19f-b65a86241906"><th id="OzYz" class="simple-table-header-color simple-table-header" style="width:166.75px"></th><td id="W]wp" class="" style="width:166.75px"></td><td id="@Gz;" class="" style="width:166.75px">Accept <a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a></td><td id="@l&gt;&lt;" class="" style="width:166.75px">Reject <a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a></td></tr><tr id="e98668c9-ac91-4ed4-a003-2654e8290bfa"><th id="OzYz" class="simple-table-header-color simple-table-header" style="width:166.75px">Truth</th><td id="W]wp" class="" style="width:166.75px"><a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a></td><td id="@Gz;" class="" style="width:166.75px">Correct</td><td id="@l&gt;&lt;" class="" style="width:166.75px">Type 1 error</td></tr><tr id="619b76f3-9cc0-4562-8d43-1fa1817c1f8f"><th id="OzYz" class="simple-table-header-color simple-table-header" style="width:166.75px"></th><td id="W]wp" class="" style="width:166.75px"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">H_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></td><td id="@Gz;" class="" style="width:166.75px">Type 2 error</td><td id="@l&gt;&lt;" class="" style="width:166.75px">Correct</td></tr></tbody></table><p id="f2b38bf2-7617-4ac4-9010-cde50408d0ce" class="">Power of a test = 1 - P(Type 2 error)</p><p id="052a7192-880b-4929-a815-9b814df07ca5" class=""><strong>Hypothesis testing: terminology</strong></p><p id="77facbe9-c7fd-4405-94ee-b64268b20ab2" class="">The likelihood ratio is called a <em>test statistic</em>: is used to decide whether to accept/reject <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</p><p id="92d24644-3206-45cf-94de-3efe33da75fa" class="">The <em>rejection region</em>: is the set of values of the test statistic that leads to the rejection of <a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a>.</p><p id="0203700d-e1f2-4893-bcb9-0efc0b23bc60" class="">The <em>acceptance region</em>: is the set of values of the test statistic that leads to the acceptance of <a href="https://www.statisticshowto.com/neyman-pearson-lemma/"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></a>.</p><p id="461255f4-ee12-471b-b286-82f134ce0753" class="">The <em>null distribution</em>: is the test statistic’s distribution when the null is true.</p><h3 id="9b2ce038-bdbe-4573-999e-47dca7d291a1" class="">Significance level and P-values</h3><p id="e93ca06d-5fd5-4159-8286-63e3361fbc6e" class="">Learning goals:</p><ul id="7047dd82-e407-467e-83bb-454c96089c45" class="bulleted-list"><li style="list-style-type:disc">Hypothesis testing: significance level and p-values.</li></ul><ul id="e26028b2-e8a1-44ac-91ea-7f566045f7ef" class="bulleted-list"><li style="list-style-type:disc">Power and sample size considerations.</li></ul><p id="74b7d609-54a9-4f73-ba7b-ee7bb2e99066" class=""><strong>Significance level &amp; P-values</strong></p><p id="ea10ce1b-dc9c-48e5-8886-d916f850b828" class="">A <em>significance level (</em><em><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span></em><em>)</em> is a probability threshold below which the null hypothesis will be rejected.</p><p id="9d5465de-b709-4836-9d80-bd2674a6bee6" class="">An <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span> must be chosen before computing the test statistic. If it isn’t, p-hacking can accuse.</p><p id="ed7f4b6e-98b0-4829-a158-809169310df0" class="">Choosing <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></span><span>﻿</span></span> is somewhat arbitrary, but often .01 or .05.</p><p id="dfc33ef7-ad7f-452d-bcc2-3c0fe1e53eb5" class="">Important terminology:</p><ul id="efbc3f0e-1000-479f-9626-5cba51984150" class="bulleted-list"><li style="list-style-type:disc">The <em>p-values</em>: smallest significance level at which the null hypothesis would be rejected.</li></ul><ul id="974677f5-d563-4c1b-80a5-4a07ef73009d" class="bulleted-list"><li style="list-style-type:disc">The <em>confidence interval</em>: the values of the statistic for which we accept the null.</li></ul><figure id="76b9fc3f-1832-4c0a-8f86-89e2052def90" class="image"><a href="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled%202.png"><img style="width:852px" src="Machine%20learning%20certificate%201119f616baca42ca823ffe9d1bce3881/Untitled%202.png"/></a></figure><p id="bef507c7-4410-4c8e-ac0f-4c0e3a28b65a" class=""><strong>Power and sample size</strong></p><p id="6efe8706-138a-468d-b8e9-8402fbdb2fbb" class="">If you do many 5% significance tests looking for a significant result, the chances of making at least one Type 1 error increase.</p><p id="46a083be-84f2-4578-98b4-16cf4c761aa7" class="">The probability of at least one Type 1 error is approximately = <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mn>0.05</mn><msup><mo stretchy="false">)</mo><mrow><mi>t</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>s</mi></mrow></msup></mrow><annotation encoding="application/x-tex">1 - (1 - 0.05)^{tests}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.043556em;vertical-align:-0.25em;"></span><span class="mord">0.05</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">es</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">s</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</p><p id="8c229d4f-588f-49db-bdfb-bb557c64d1e5" class="">This is roughly 0.05 x (#tests) if you have 10 or fewer tests.</p><h3 id="1b18f01a-8bfa-430c-90c7-f63a3681dcea" class="">Correlation vs Causation</h3><p id="9c786743-3809-417b-88b0-747324db2c1b" class="">Learning goals:</p><ul id="0972ca2f-b642-4558-9136-8c0f5903a3fd" class="bulleted-list"><li style="list-style-type:disc">Correlation vs. causation</li></ul><ul id="143e23db-b232-42fd-a2ca-f13e48d27aaa" class="bulleted-list"><li style="list-style-type:disc">Confounding variables</li></ul><ul id="5536fca1-c179-4bc8-9402-03511c3cf0f1" class="bulleted-list"><li style="list-style-type:disc">Examples of spurious correlations</li></ul><p id="932e5f31-131b-4add-903e-3a130c462cf2" class=""><strong>How correlations are important</strong></p><p id="c4239282-f598-4eac-a6ea-49680ce7e071" class="">if 2 variables X and Y are correlated, then X is useful for predicting Y.</p><p id="14c9de7c-8f20-4df8-8c57-da18f9a8594c" class="">If we are trying to model Y, and we find things that correlate with Y, we may improve the modeling.</p><p id="c28aa31a-96c4-4245-9ac4-0be34dd919b7" class="">We should be careful about changing X with the hope of changing Y.</p><p id="537eb228-cb89-49b3-94b8-0c0c31760098" class="">X and Y can be correlated for different reasons:</p><ul id="83798788-cb75-4837-9a31-fff2b504aaf2" class="bulleted-list"><li style="list-style-type:disc">X causes Y (what we want).</li></ul><ul id="3a8c3e5f-08d7-42b7-ad6c-8c3128168c9f" class="bulleted-list"><li style="list-style-type:disc">Y causes X (mixing up cause-and-effect).</li></ul><ul id="94f1624e-08a9-4de7-a10a-d3467a5fb6bf" class="bulleted-list"><li style="list-style-type:disc">X and Y are both caused by something else (confounding).</li></ul><ul id="e0c0d31b-d172-4653-a439-6d071d947e2b" class="bulleted-list"><li style="list-style-type:disc">X and Y aren’t really related, we just got unlucky in the sample (spurious).</li></ul><p id="1e57f57d-0c6e-4f6d-bbbd-4bab6259ba2b" class="">Correlations are useful as effects can help predict an outcome, but correlation does not imply causation.</p><p id="b8fccc30-0eab-4107-ac8d-0dfd16c77267" class="">When making recommendations, one should take into <em>consideration confounding variables</em> and the fact that correlation across two variables does not imply that an increase or decrease in one of them will drive an increase or decrease in the other.</p><p id="9e61d0df-2241-4dc3-ab9c-06fdacb7c9b8" class=""><em>Spurious correlations </em>happen in data. They are just coincidences given a particular data sample.</p><h2 id="4c39a031-f647-4b31-9558-1e648b96a48d" class="">Honour Project</h2><p id="b893fce3-2562-409e-a795-b76f05182ae9" class="">
+</p><p id="e1e4ffc4-05e2-463b-958f-30c4df3d6561" class="">
+</p><hr id="e5bdf7a8-4b60-49fb-aa2f-494b77ff447f"/><h1 id="2af09e95-baef-4396-a883-928c29fc3683" class="">Course #2: Supervised Machine Learning: Regression</h1><h2 id="e11e79c5-abf8-44d3-a607-65baa8cf4964" class="">Week 1</h2><h3 id="4021a3a7-ac94-4414-8714-1773c405e159" class="">Course prerequisites</h3><ul id="02bbd30b-732b-4441-9d1b-3e0aa40b87d4" class="bulleted-list"><li style="list-style-type:disc">Familiarity with programming in a Python development environment.</li></ul><ul id="404f4d5a-5d25-48b1-8087-7e504f87e20f" class="bulleted-list"><li style="list-style-type:disc">Familiarity with Jupyter notebooks.</li></ul><ul id="cb37df41-afe7-496f-965b-c451b6c4aeea" class="bulleted-list"><li style="list-style-type:disc">Fundamental understanding of Calculus, Linear algebra, Probability, and Statistics.</li></ul><ul id="4e498ad1-338f-487d-8765-dc9c4c9c638f" class="bulleted-list"><li style="list-style-type:disc">Familiarity with Exploratory Data Analysis, Feature Engineering, handling missing values, and handling categorical values.</li></ul><h3 id="bcac1e99-c2bc-409c-9c73-220765e2d5c6" class="">Introduction to supervised machine learning</h3><p id="36dc8324-f75e-4385-afd3-cbe0746f7dba" class=""><strong>What is Machine Learning?</strong></p><p id="f8235a3c-5189-48a2-ae41-ff6efb7619f5" class=""><em>Machine learning</em> is the process through which computers are said to “learn” and infer predictions from data.</p><p id="d5c0ea05-8d3d-4e10-9473-62f59d482081" class=""><strong>Model: A learning algorithm</strong></p><p id="7b007d83-13ac-4315-8d71-0c9952ef8ac0" class="">A <em>model</em> is a small thing that captures a larger thing.</p><p id="a9f15816-92ef-4cbd-8b0d-189b27071f48" class="">A <em>good model </em>omits unimportant details while retaining what’s important.</p><p id="c79c7ffa-e862-476d-86a0-4cff84bcaaa0" class=""><strong>Machine learning framework</strong></p><figure id="9030b85c-9f10-4f2c-aa8b-b38a84572850" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_p = f(\Omega,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">Ω</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></div></figure><ul id="55ebbb8e-405b-4f26-90b5-bf4fe2a85bfa" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span></span><span>﻿</span></span>: Input<p id="2947833a-99de-4c78-a537-0b5757b30eb2" class="">Observations: rows or examples the model will see.</p><p id="8b9ad3cb-605e-42f3-af6e-abb22934ed37" class="">Features: the different ways that we measure each observation.</p></li></ul><ul id="465fa0e7-b242-462f-a039-5e430d75f8ff" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">y_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>: Output (values predicted by the model)<p id="5c61ea2d-83aa-4b92-b9b5-2fa052839cff" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">y_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> is the prediction of the model and <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span> is the observed values of the target variable.</p></li></ul><ul id="6006fe50-c149-4a7f-8318-82d58ca41e92" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span>: Parameters of the model (1 or more variables).<p id="6ccfd4c9-dfba-4e95-b320-0e3e9ccc2adf" class="">A <em>hyperparameter</em> is a parameter that is not learned directly from the data but relates to implementation: training the ML model.</p><p id="3624bc68-1d61-422b-900b-1b2b30ee328d" class="">Framework estimates a relationship between the features and target:</p><ul id="2431efd3-e816-4aec-baff-31c7de2433cc" class="bulleted-list"><li style="list-style-type:circle"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> involve aspects of the model estimating using the data.</li></ul><ul id="ca3cc658-27ef-4b61-8acd-e7f895a779f7" class="bulleted-list"><li style="list-style-type:circle">To implement our approach, we make decisions regarding how to produce these estimates.</li></ul><ul id="9b210494-933e-4d5e-8cab-5a7cd31f4e04" class="bulleted-list"><li style="list-style-type:circle">These decisions lead to hyperparameters that are an important part of the machine learning workflow (though not explicit components of the model).</li></ul><p id="a7c90bbf-a68d-4bcb-929d-8291e2eab24d" class="">2 main modeling approaches:</p><ul id="4fabacaf-fff9-4bdc-bbae-9b24dbaed9b0" class="bulleted-list"><li style="list-style-type:circle">Regression: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span> is numeric.</li></ul><ul id="73362842-b22c-4912-8fd7-e5cc4cb6a4aa" class="bulleted-list"><li style="list-style-type:circle">Classification: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span> is categorical.</li></ul></li></ul><ul id="a3bfe7b2-5221-4545-bdbf-f3a7c66ac687" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(\cdot)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">⋅</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>: Prediction function that generates predictions from <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span></span><span>﻿</span></span> and <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span>.<p id="4e556dd1-cc62-4a8d-ac9b-dd8c73986c4e" class="">Data scientists train the model to find the best <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> given past experience.</p></li></ul><ul id="a8be2738-cafc-4917-a8e2-9cfd7e59af95" class="bulleted-list"><li style="list-style-type:disc"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><msub><mi>y</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">J(y,y_p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>: Loss<p id="78d7ebdf-fac5-4663-96ce-92622fcd3f76" class="">Most ML models define a quantitive score for how “good” our predictions are.</p><p id="a7d5c468-f122-4c89-a870-c7bd4c0fa498" class="">Typically measures how close our predictions are to the true values.</p></li></ul><p id="63d01168-0fef-48e9-8a51-a27dcc79da16" class=""><em>Update rule</em>: using features <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span></span><span>﻿</span></span> and outcome <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span>, choose parameters <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> to minimize loss <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span></span><span>﻿</span></span>.</p><h3 id="0f49428d-c99d-4f79-aa58-d9b8d605d4e5" class=""><strong>Supervised machine learning: Approaches</strong></h3><p id="4b87dc96-c677-4f08-9760-fa35a185523e" class="">Learning goals:</p><ul id="d7898930-07d1-420c-9211-dceb1bfea0e9" class="bulleted-list"><li style="list-style-type:disc">Machine learning objectives: interpretation and prediction.</li></ul><ul id="7358b9ab-a544-4265-b6d3-0ecd490bfbba" class="bulleted-list"><li style="list-style-type:disc">Examples of Machine learning applications.</li></ul><ul id="d6e55d2d-0c7f-4c0d-8dbf-5c636f461711" class="bulleted-list"><li style="list-style-type:disc">The machine learning framework.</li></ul><p id="33b72664-5f7d-45be-8d5a-df55f13bb28d" class=""><strong>Interpretation </strong></p><p id="442b650d-bc9d-4d7d-a4ad-984cbbb26d5b" class="">In some cases, the primary objective is to train a model to find insights from the data.</p><p id="5a777041-1497-4749-9f49-ad1d794aac63" class="">in <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_p = f(\Omega,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">Ω</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>, the interpretation approach uses <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> to give us insight into a system.</p><p id="c8a4fd85-3d2a-4022-a245-c5efc2a0c3c8" class="">Common workflow:</p><ul id="1e3f2934-fc46-4e3a-a19d-42044985b019" class="bulleted-list"><li style="list-style-type:disc">Gathering <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span></span><span>﻿</span></span>, <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span>.</li></ul><ul id="95fd04d6-e0fd-4869-a782-2fe59c952932" class="bulleted-list"><li style="list-style-type:disc">Training model by finding the <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> that gives the best prediction <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_p = f(\Omega,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">Ω</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>.</li></ul><ul id="b4d3b8ab-eb7c-4d84-b00c-fa2a7598fced" class="bulleted-list"><li style="list-style-type:disc">Focus on <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span></span><span>﻿</span></span> (rather than <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">y_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>) to generate insights.</li></ul><p id="593bdd3d-fa67-43f1-bcfa-937b389ab206" class=""><strong>Prediction</strong></p><p id="b00e2b01-23c7-4343-be5e-3eeeea7c378b" class="">In some cases, the primary objective is to make the best prediction.</p><p id="e24df47e-de36-4edc-8690-02185ddcff68" class="">In <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_p = f(\Omega,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">Ω</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>, the prediction approach compares <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">y_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> with <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span>.</p><p id="06113a4c-7551-45f9-8236-5800cc4d01c1" class="">The focus is on performance metrics, which measure the quality of the model’s predictions.</p><ul id="cace0c7c-3665-40ca-8ec5-2855c6c7e456" class="bulleted-list"><li style="list-style-type:disc">Performance metrics usually involve some measure of closeness between <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">y_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> with <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><span>﻿</span></span>.</li></ul><ul id="63386470-0aeb-4870-9261-87a9cdf24624" class="bulleted-list"><li style="list-style-type:disc">Without focusing on interpretability, we risk having a Black-box model.</li></ul><p id="3e61a36f-9faa-4332-a584-811f6ba1e0e3" class=""><strong>Two common approaches</strong></p><p id="caec314d-5bc2-411b-8208-38734fecf96c" class="">Interpretation and prediction in supervised machine learning:</p><ul id="95480da9-1635-4b17-8dc5-4b6be9161987" class="bulleted-list"><li style="list-style-type:disc">The majority of projects will call for a balance.</li></ul><ul id="a4ebeddb-44d5-4b07-8c2d-33740719256a" class="bulleted-list"><li style="list-style-type:disc">Interpretation can provide insight into improvements in prediction, and vice-versa.</li></ul><ul id="3d9dca56-b63e-4b15-9156-79ef3747430f" class="bulleted-list"><li style="list-style-type:disc">Not all models will allow both: SML models provide varying levels of support for interpretation vs. prediction.</li></ul><h3 id="ce0bf7d7-02bb-4e06-a2dd-041365f143ef" class="">Linear Regression</h3><p id="6fb452d8-e18f-4275-ad3f-4e9285b2acb4" class="">Learning goals:</p><ul id="1a70f717-b432-4d80-87aa-31363127bfb8" class="bulleted-list"><li style="list-style-type:disc">Linear Regression</li></ul><ul id="c7628749-c4f8-4b3a-afd7-da897709c102" class="bulleted-list"><li style="list-style-type:disc">Modeling best practice</li></ul><ul id="3056eb36-2b06-4b21-9633-08d9ee36edb4" class="bulleted-list"><li style="list-style-type:disc">Measuring errors</li></ul><p id="f2fd8c74-bfdd-47d9-b844-2685e42394f6" class=""><strong>Introduction to Linear Regression</strong></p><p id="24d5d7b6-db35-4e3f-b7e2-a605ddb17ca0" class="">
+</p><p id="59ce3216-368d-4773-bd3b-aaa87040ab07" class="">
+</p><p id="76486151-65aa-429f-9a92-78f6251c94b4" class="">
+</p><p id="01904e69-8d32-48a1-87df-9d8bef82406f" class="">
+</p><p id="8d9c7262-ffea-496f-8ce1-559093061df3" class="">
+</p><p id="8c1fccef-2ac2-4cda-9414-2bf80c68d943" class="">
+</p><p id="bf717dcc-b258-4c1c-8304-2c2f2e1c8572" class="">
+</p><p id="643a9ec4-c27d-4d3f-8d4f-436377870250" class="">
+</p><p id="d1e77280-84fb-4141-bbfd-626dc2c051de" class="">
+</p><p id="eac26018-c8f7-422c-b05d-cde3d9f27bec" class="">
+</p><p id="55bdad72-5b8b-4692-9e4b-11cc43006da2" class="">
+</p><p id="fbdfc1e1-0dfc-413e-aa70-7088b1ddd6cf" class="">
+</p><p id="70087771-7e1d-47dc-8278-eb99f67b631a" class="">
+</p><hr id="099e50dc-905b-4f35-861e-5f708ae2d265"/><h1 id="21fc6b6c-811b-4994-a511-a3e6fe9ed1ce" class="">Notes &amp; materials</h1><figure id="c8a21d8b-489a-4b33-9823-4b65eaa8a35b" class="link-to-page"><a href="https://www.notion.so/Statistics-for-Machine-Learning-c8a21d8b489a4b3398234b65eaa8a35b">Statistics for Machine Learning</a></figure><figure id="8cc07ba3-f07e-4028-83d6-fac809087244" class="link-to-page"><a href="https://www.notion.so/Terminology-in-Machine-learning-8cc07ba3f07e402883d6fac809087244">Terminology in Machine learning</a></figure></div></article></body></html>
